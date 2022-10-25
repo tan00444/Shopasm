@@ -1,0 +1,35 @@
+<h1>Category</h1>
+<a href="category/create" class="btn btn-info la la-plus" role="button"> <i></i> Add Category</a>
+<div class="col-12">
+    <div class="card recent-sales overflow-auto">
+
+        <div class="filter">
+            <a class="icon" href="#" data-bs-toggle="dropdown"><i></i></a>
+        </div>
+
+        <div class="card-body">
+            <table class="table table-borderless datatable">
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                        <th scope="col">Description</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each categorys}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>{{this.des}}</td>
+                        <th>
+                            <a href="category/{{this._id}}/edit">Edit</a>
+                            <a href="category/{{this._id}}/delete">Delete</a>
+                        </th>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+        </div>
+        </ul>
+    </div>
+</div>

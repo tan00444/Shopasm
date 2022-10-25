@@ -1,0 +1,39 @@
+<div class="mt-4">
+    <h1>Create Product</h1>
+    <form method="POST" action="/product/store" , enctype="multipart/form-data">
+
+        <div class="row mb-3">
+            <label for="inputText" class="col-sm-2 col-form-label">Name Product</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="des">Description Product</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="des">
+        </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Category</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="cate">
+                {{#each category}}
+                <option>{{this.name}}</option>
+                {{/each}}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="des">Price</label>
+            <input type="text" class="form-control" id="exampleInputEmail1" name="price">
+        </div>
+
+        <div class="form-group">
+            <label for="des">Img</label>
+            <input type="file" class="form-control-file" id="exampleInputEmail1" name="img">
+        </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
